@@ -1,24 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+// Browser router
+import { BrowserRouter, Route, Routes, Link } from 'react-router-dom';
+// css
+import Styles from "./App.module.css"
+// components
+import Mainpage from './Components/MainPage/Mainpage';
+import Sidebar from './Components/Sidebar/Sidebar';
+// functions
+import SideButton from './Functions/Sidebar';
+// context
+import Contextprovider from './context/Contextprovider';
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  
+    <BrowserRouter>
+    <Contextprovider>
+        <div className='flex bg-[#1F1D2B] h-[100vh] overflow-hidden '>
+          <div className={`w-0 md:w-auto `}>
+            <Sidebar ></Sidebar>
+          </div>
+
+          <div className={`bg-[#1F1D2B]  ${Styles.Sidebar_Parent}`}>
+            { window.screen.width < 768 && SideButton() }
+            <Routes>
+              <Route  path='/' element={<Mainpage />}></Route>
+            </Routes>    
+          </div>
+        </div>
+      </Contextprovider>
+    </BrowserRouter>
+
   );
 }
 
