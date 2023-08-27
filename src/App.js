@@ -16,7 +16,7 @@ function App() {
   return (
   
     <BrowserRouter>
-    <Contextprovider>
+      <Contextprovider >
         <div className='flex bg-[#1F1D2B] h-[100vh] overflow-hidden '>
           <div className={`w-0 md:w-auto `}>
             <Sidebar ></Sidebar>
@@ -24,9 +24,11 @@ function App() {
 
           <div className={`bg-[#1F1D2B]  ${Styles.Sidebar_Parent}`}>
             { window.screen.width < 768 && SideButton() }
+            <Contextprovider>
             <Routes>
               <Route  path='/' element={<Mainpage />}></Route>
-            </Routes>    
+            </Routes>  
+            </Contextprovider>  
           </div>
         </div>
       </Contextprovider>

@@ -5,16 +5,19 @@ import Styles from './Mainpage.module.css'
 // components
 import Sidebar from '../Sidebar/Sidebar';
 // context
-import MyContext from '../../context/createcontext';
+import { MyContext } from '../../context/Contextprovider';
 
 
 const Mainpage = () => {
-    const test = useContext(MyContext)
-    console.log("test")
+
+    const data = useContext(MyContext)
+
+
+    console.log(data)
   
     return (
         <div className={`${Styles.Main_container}`}>
-            test skfdcgdsbcdscsvdsrtgfjhgnghjfugm
+            <p>{data}</p>
         </div>
     );
 };

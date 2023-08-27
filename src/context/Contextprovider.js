@@ -1,13 +1,23 @@
 import React, { Children } from 'react';
 
-// context
-import MyContext from './createcontext';
+// Hooks
+import { useState } from 'react';
 
-const Contextprovider = ({Children}) => {
-    const data="test"
+
+// context
+export const MyContext = React.createContext();
+
+const Contextprovider = (props) => {
+
+    
+
+
+    const [Data , setdata] = useState("this is test for ")
+
     return (
-        <MyContext.Provider value={data} >
-            {Children}
+        
+        <MyContext.Provider value={Data} >
+            {props.children }
         </MyContext.Provider>
     );
 };
