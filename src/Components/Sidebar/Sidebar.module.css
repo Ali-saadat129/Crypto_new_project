@@ -1,6 +1,6 @@
 .sidebar{
-    display: inline-block;
-    left: 0;
+    /* display: block; */
+    height: 100%;
 }
 
 svg{
@@ -12,12 +12,4 @@ a{
 }
 
     
-    /* .sidebar::before{
-        content: "Menu";
-        display: flex;
-        flex-direction: row-reverse;
-        right: 0;
-        color: white;
-    
-    } */
 

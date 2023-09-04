@@ -1,26 +1,20 @@
-import React , {useContext} from 'react';
+import React, { useContext } from "react";
 
 // css
-import Styles from './Mainpage.module.css'
+import Styles from "./Mainpage.module.css";
 // components
-import Sidebar from '../Sidebar/Sidebar';
+import Sidebar from "../Sidebar/Sidebar";
 // context
-import { MyContext } from '../../context/Contextprovider';
-
+import { MyContext } from "../../context/Contextprovider";
 
 const Mainpage = () => {
+  const data = useContext(MyContext);
 
-    const data = useContext(MyContext)
-
-
-    console.log(data)
-  
-    return (
-        <div className={`${Styles.Main_container}`}>
-            <p>{data}</p>
-        </div>
-    );
+  return (
+    <div className={`${Styles.Main_container} text-white`}>
+      <p>{data}</p>
+    </div>
+  );
 };
 
 export default Mainpage;
-

@@ -1,8 +1,5 @@
-
-
-    /* .Sidebar_Parent::before{
-        content: "Menu";
-        right: 0;
-        width: fit-content;
-        background-color: #1F1D2B;
-    } */
+.test {
+  display: none;
+  transform: translateX(-100%);
+  visibility: hidden;
+}
