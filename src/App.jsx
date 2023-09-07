@@ -5,6 +5,7 @@ import Styles from "./App.module.css";
 // components
 import Mainpage from "./Components/MainPage/Mainpage";
 import Sidebar from "./Components/Sidebar/Sidebar";
+import Wallet from "./Components/Wallet/Wallet";
 // functions
 import SideButton from "./Functions/Sidebar";
 // context
@@ -22,10 +23,14 @@ function App() {
     <BrowserRouter>
       <Contextprovider>
         <div
-          className={`bg-[#1F1D2B] h-[100vh] overflow-hidden grid md:grid-cols-[2fr_6fr] lg:grid-cols-[1fr_6fr] grid-cols-[1fr_5fr] ${!show && window.screen.width < 768 ? "grid-cols-[50px_5fr]" : "grid-cols-[1fr_5fr]"}  `}
+          className={`bg-[#1F1D2B] h-[100vh] overflow-hidden grid md:grid-cols-[2fr_6fr] lg:grid-cols-[1fr_6fr] grid-cols-[1fr_5fr] ${
+            !show && window.screen.width < 768
+              ? "grid-cols-[50px_5fr]"
+              : "grid-cols-[1fr_5fr]"
+          }  `}
         >
           <div className={``}>
-            <nav className={``} onClick={() => setshow(!show)}>
+            <nav className={``} onClick={() => setshow(!show)}>      
               {window.screen.width < 768 && SideButton()}
             </nav>
             <nav
@@ -38,10 +43,15 @@ function App() {
             </nav>
           </div>
 
-          <div className={`bg-[#1F1D2B] p-4 ${show && window.screen.width < 768 && "blur"} ${Styles.Sidebar_Parent}`}>
+          <div
+            className={`bg-[#1F1D2B] p-4 ${
+              show && window.screen.width < 768 && "blur"
+            } ${Styles.Sidebar_Parent}`}
+          >
             <Contextprovider>
               <Routes>
                 <Route path="/" element={<Mainpage />}></Route>
+                <Route path="/wallet" element={<Wallet />} ></Route>
               </Routes>
             </Contextprovider>
           </div>

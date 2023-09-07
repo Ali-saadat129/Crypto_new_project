@@ -5,13 +5,22 @@ import { Link } from "react-router-dom";
 // css
 import Styles from "./Sidebar.module.css";
 // components
-import  SideButton  from "../../Functions/Sidebar";
+import SideButton from "../../Functions/Sidebar";
+// icons
+import { logo } from "../../Functions/Sidebar";
 
 function Sidebar() {
+
+
+
   return (
     <div className={`${Styles.sidebar} me-5 mt-5 `}>
-      <ul className="text-white mb-0 ps-5 md:p-3">
-        <li>
+      <div  className="md:flex text-white items-center mb-7 ps-5  ">
+        {logo()}
+        <p className="text-lg pt-4">Tetherium</p>
+      </div>
+      <ul className="text-white mb-0 ps-5 md:p-3 ">
+        <li className="hover:rounded-full hover:text-black" >
           <Link className=" text-lg mb-5 flex items-center ">
             <svg
               className="mr-[50px]"
@@ -28,8 +37,8 @@ function Sidebar() {
           </Link>
         </li>
 
-        <li>
-          <Link className="flex items-center">
+        <li className="hover:rounded-full hover:text-black" >
+          <Link to="/Wallet" className="flex items-center">
             <svg
               className="mr-[50px]"
               xmlns="http://www.w3.org/2000/svg"
@@ -45,7 +54,7 @@ function Sidebar() {
           </Link>
         </li>
 
-        <li>
+        <li className="hover:rounded-full hover:text-black" >
           <Link className="flex items-center">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -61,7 +70,7 @@ function Sidebar() {
           </Link>
         </li>
 
-        <li>
+        <li className="hover:rounded-full hover:text-black" >
           <Link className="flex items-center">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -81,7 +90,7 @@ function Sidebar() {
       </ul>
 
       <ul className="text-white mt-0 ps-5 md:ps-3 w-100">
-        <li>
+        <li className="hover:rounded-full hover:text-black" >
           <Link Link className="flex items-center">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -96,7 +105,7 @@ function Sidebar() {
             Setting
           </Link>
         </li>
-        <li>
+        <li className="hover:rounded-full hover:text-black" >
           <Link Link className="flex items-center">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -111,7 +120,7 @@ function Sidebar() {
             Privacy
           </Link>
         </li>
-        <li className="w-100">
+        <li className="hover:rounded-full hover:text-black w-100" >
           <Link Link className="flex items-center w-[120%]">
             <svg
               xmlns="http://www.w3.org/2000/svg"
