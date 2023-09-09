@@ -10,6 +10,15 @@ a{
     font-size: 1.2rem;
     font-family: sans-serif;
 }
-
-
-
+li{
+    border:1px solid transparent
+}
+li:hover svg{
+    fill:#FF7551
+}
+svg{
+    font-size: 10rem;
+}
+/* li.active svg{
+    fill:#FF7551
+} */
