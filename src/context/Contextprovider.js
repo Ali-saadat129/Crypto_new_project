@@ -2,17 +2,30 @@ import React, { Children } from 'react';
 
 // Hooks
 import { useState } from 'react';
+import { useEffect } from 'react';
 
-
+// Data
+import DataRequest from './Api/Api';
 // context
 export const MyContext = React.createContext();
 
-const Contextprovider = (props) => {
 
+const Contextprovider = (props) => {
+    
+    const [Data , setData] = useState()
+
+
+    useEffect( () => {
+        const dataReceiver = async () => {
+            const data = await DataRequest();
+            console.log(data)
+            setData(data)
+        }
+        dataReceiver()
+    }, [] )
     
 
 
-    const [Data , setdata] = useState("this is test for ")
 
     return (
         

@@ -1,5 +1,5 @@
 // Browser router
-import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 // css
 import Styles from "./App.module.css";
 // components

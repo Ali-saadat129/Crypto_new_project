@@ -1,11 +1,9 @@
 import React from "react";
-import ReactDOM from "react-dom/client";
 // Browser router
 import { Link } from "react-router-dom";
 // css
 import Styles from "./Sidebar.module.css";
-// components
-import SideButton from "../../Functions/Sidebar";
+
 // icons
 import { logo } from "../../Functions/Sidebar";
 
