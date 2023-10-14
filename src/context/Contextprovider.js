@@ -7,18 +7,17 @@ import { useEffect } from 'react';
 // Data
 import DataRequest from './Api/Api';
 // context
+
+
 export const MyContext = React.createContext();
-
-
 const Contextprovider = (props) => {
     
-    const [Data , setData] = useState()
+    const [Data , setData] = useState([])
 
 
     useEffect( () => {
         const dataReceiver = async () => {
             const data = await DataRequest();
-            console.log(data)
             setData(data)
         }
         dataReceiver()
