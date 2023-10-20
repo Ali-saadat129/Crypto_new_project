@@ -1,4 +1,10 @@
-.test {
+@font-face {
+  font-family: 'gabarito';
+  src: url('../public/fonts/Gabarito-VariableFont_wght.ttf') format('truetype'),
+
+}
+
+test {
   display: none;
   transform: translateX(-100%);
   visibility: hidden;

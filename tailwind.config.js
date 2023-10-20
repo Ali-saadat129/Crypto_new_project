@@ -9,7 +9,10 @@ export default {
       active : {
         color:'#FF7551'
 
-      }
+      },
+      fontFamily: {
+        gabarito: ['gabarito', 'sans-serif'],
+      },
     },
   },
   plugins: [],

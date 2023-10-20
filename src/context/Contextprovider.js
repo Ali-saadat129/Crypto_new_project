@@ -13,12 +13,13 @@ export const MyContext = React.createContext();
 const Contextprovider = (props) => {
     
     const [Data , setData] = useState([])
-
+    const [walletData , setWallet] = useState([])
 
     useEffect( () => {
         const dataReceiver = async () => {
             const data = await DataRequest();
-            setData(data)
+            setData(data.data)
+            setWallet(data.walletData)
         }
         dataReceiver()
     }, [] )
@@ -28,7 +29,7 @@ const Contextprovider = (props) => {
 
     return (
         
-        <MyContext.Provider value={Data} >
+        <MyContext.Provider value={{Data,walletData}} >
             {props.children }
         </MyContext.Provider>
     );

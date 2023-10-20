@@ -27,7 +27,7 @@ export default function SideButton() {
         height="29"
         viewBox="0 0 24 24"
       >
-        <g fill="none" stroke="white" stroke-width="2">
+        <g fill="none" stroke="white" >
           <path d="M2 6h20M2 12h20M2 18h20" />
         </g>
       </svg>

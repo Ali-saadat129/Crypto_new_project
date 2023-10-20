@@ -1,3 +1,5 @@
-.header {
-    font-size: 2rem;
+
+::-webkit-scrollbar {
+    height: 0;
+    width: 0;
 }

@@ -3,48 +3,30 @@ import React from "react";
 // css
 import Styles from "./Wallet.module.css";
 // components
-import Littletokens from "../../Shared/littletokens";
-
-
+import Littletokens from "../../Shared/Littletokens";
+import BigTokens from "../../Shared/BigTokens";
+import WalletNavbar from "./WalletNavbar";
+// data - context
+import { useContext } from "react";
+import { MyContext } from "../../context/Contextprovider";
 
 const Wallet = () => {
-  return (
-    <div className="text-white flex items-center flex-col pt-11">
-      <header className="w-full flex justify-center flex-col ">
-        <nav className="  flex justify-end">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="20"
-            height="20"
-            fill="currentColor"
-            className="bi bi-bell-fill"
-            viewBox="0 0 16 16"
-          >
-            <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zm.995-14.901a1 1 0 1 0-1.99 0A5.002 5.002 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901z" />
-          </svg>
+  const data2 = useContext(MyContext);
+  const data = data2.walletData;
 
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="20"
-            height="20"
-            fill="currentColor"
-            className="bi bi-bookmark-plus-fill"
-            viewBox="0 0 16 16"
-          >
-            <path
-              fill-rule="evenodd"
-              d="M2 15.5V2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.74.439L8 13.069l-5.26 2.87A.5.5 0 0 1 2 15.5zm6.5-11a.5.5 0 0 0-1 0V6H6a.5.5 0 0 0 0 1h1.5v1.5a.5.5 0 0 0 1 0V7H10a.5.5 0 0 0 0-1H8.5V4.5z"
-            />
-          </svg>
-        </nav>
+  return (
+    <div className="text-white flex items-center flex-col pt-11 overflow-auto">
+      <header className="w-full flex justify-center flex-col ">
+        <nav className="  flex justify-end">{WalletNavbar}</nav>
         <div className="flex flex-col   items-center w-full ">
-          <h2 className={`text-xl ${Styles.header}`}>Wallet</h2>
-          <p>YOUR BALANCE</p>
-          <h2>
-            <span>$</span>12,456.<span>87</span>
+          <h2 className={`text-5xl mb-5 ${Styles.header}`}>   Wallet </h2>
+          <p className="text-2xl text-lime-400 shadow-sm">YOUR BALANCE</p>
+          <h2> 
+            <span className="text-2xl px-2 ">$</span>
+            <span className="text-2xl text-red-300">830.85</span>
           </h2>
         </div>
-        <div className="flex justify-around">
+        <div className="flex justify-evenly mt-10">
           <button className="max-w-[6rem] min-w-[6rem] flex  items-center  bg-white hover:bg-white text-black font-semibold py-2 px-4 rounded-full shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50">
             Send
             <span className="ps-1">
@@ -79,9 +61,16 @@ const Wallet = () => {
           </button>
         </div>
       </header>
-      <div>
-        <nav>Tokens</nav>
-        <div className="flex flex-col ">{Littletokens}</div>
+      <div className="w-[100%]">
+        <div className="flex justify-between px-32 py-10">
+          <h2>Tokens</h2>
+          <h2 className={`lg:hidden`}>amount</h2>
+        </div>
+        <div className="flex flex-col w-[100%] overflow-scroll lg:grid lg:grid-cols-3 lg:px-10 justify-center   ">
+          {window.screen.width < 1024
+            ? data.map((elem) => <Littletokens key={elem.name} data={elem} />)
+            : data.map((elem) => <BigTokens key={elem.name} data={elem} />)}
+        </div>
       </div>
     </div>
   );

@@ -1,14 +1,21 @@
 import axios from "axios";
 
 
-// const axios = require('axios');
+const DataRequest = async () => {
+  try {
+    const response = await fetch('/data.json');
+    const walletdata = await fetch('/wallet.json');
+    if (!response.ok  ) {
+      throw new Error('Failed to fetch data');
+    }
 
-
-const DataRequest = async() => {
-    const URL = "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false&locale=en    "
-
-    const Response = await axios.get(URL)
-    return Response.data
-}
+    const data = await response.json();
+    const walletData = await walletdata.json();
+    return {data:data,walletData:walletData};
+  } catch (error) {
+    console.error('Error fetching data:', error);
+    return null;
+  }
+};
 
 export default DataRequest;

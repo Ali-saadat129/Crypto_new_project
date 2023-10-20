@@ -1,20 +1,26 @@
-import React from 'react'
-// Hooks
-import { useContext } from 'react'
- import { MyContext } from '../context/Contextprovider'
+import React from "react";
 
-
-  const  Littletokens = () => {
-
-    const data = useContext(MyContext)
-    console.log(data)
-
-    const test = (data) => {
-        console.log(data)
-    }
+const Littletokens = (props) => {
+  const { data } = props;
 
   return (
-    <div><button onClick={() => test(data)}>show</button></div>
-  )
-}
-export default Littletokens
+    <div className="flex items-center justify-between w-full p-2">
+      <div className="flex items-center space-x-6">
+        <img
+          src={data.image}
+          alt={data.name}
+          width="60px"
+          height="60px"
+          className="border rounded-full  p-2 box-border"
+        />
+        <p className="text-[1.5rem]">{data.name}</p>
+      </div>
+
+      <div className="text-[1.5rem]">
+        <p>{`${data.current_price} $`}</p>
+      </div>
+    </div>
+  );
+};
+
+export default Littletokens;

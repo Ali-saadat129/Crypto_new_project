@@ -23,7 +23,7 @@ function App() {
     <BrowserRouter>
       <Contextprovider>
         <div
-          className={`bg-[#1F1D2B] h-[100vh] overflow-hidden grid md:grid-cols-[2fr_6fr] lg:grid-cols-[1fr_6fr] grid-cols-[1fr_5fr] ${
+          className={`bg-[#1F1D2B] h-[100vh]  grid md:grid-cols-[2fr_6fr] lg:grid-cols-[1fr_6fr] grid-cols-[1fr_5fr] font-gabarito ${
             !show && window.screen.width < 768
               ? "grid-cols-[50px_5fr]"
               : "grid-cols-[1fr_5fr]"
@@ -44,7 +44,7 @@ function App() {
           </div>
 
           <div
-            className={`bg-[#1F1D2B] p-4 ${
+            className={`overflow-scroll  bg-[#1F1D2B] p-4 ${
               show && window.screen.width < 768 && "blur"
             } ${Styles.Sidebar_Parent}`}
           >
