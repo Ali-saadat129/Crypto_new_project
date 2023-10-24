@@ -6,6 +6,7 @@ import Styles from "./App.module.css";
 import Mainpage from "./Components/MainPage/Mainpage";
 import Sidebar from "./Components/Sidebar/Sidebar";
 import Wallet from "./Components/Wallet/Wallet";
+import Search from "./Components/Search/Search";
 // functions
 import SideButton from "./Functions/Sidebar";
 // context
@@ -52,6 +53,7 @@ function App() {
               <Routes>
                 <Route path="/" element={<Mainpage />}></Route>
                 <Route path="/wallet" element={<Wallet />} ></Route>
+                <Route path="/searchpage" element={<Search />}></Route>
               </Routes>
             </Contextprovider>
           </div>

@@ -49,7 +49,7 @@ function Sidebar() {
         </li>
 
         <li onClick={event => console.log(event.target)} className="hover:text-[#fffff] transition-all duration-100 p-2 ">
-          <Link className="flex items-center">
+          <Link to="/searchpage" className="flex items-center">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"
