@@ -7,8 +7,8 @@ import Littletokens from "../../Shared/Littletokens";
 import BigTokens from "../../Shared/BigTokens";
 import WalletNavbar from "./WalletNavbar";
 // data - context
-import { useContext } from "react";
 import { MyContext } from "../../context/Contextprovider";
+import { useContext } from "react";
 
 const Wallet = () => {
   const data2 = useContext(MyContext);

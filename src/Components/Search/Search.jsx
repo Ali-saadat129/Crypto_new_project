@@ -12,7 +12,6 @@ import Littletokens from "../../Shared/Littletokens";
 export default function Search() {
   const Recive = useContext(MyContext);
   const data = Recive.Data;
-
   // data to show 
   const [Value , setValue] = useState([])
   // input enter
@@ -28,8 +27,15 @@ export default function Search() {
   }
   useEffect(() => {
     FilterHandler(Input , data);
-
   },[Input])
+  useEffect(() => {
+    setValue(data);
+    FilterHandler(Input , data);
+  },[Input , data])
+
+  const show = () => {
+    console.log(Recive.Data)
+  }
 
 
   return (
@@ -53,11 +59,17 @@ export default function Search() {
           </button>
         </div>
       </header>
-      <div className="flex flex-col">
-      {window.screen.width < 1024
+      <button onClick={show}>test</button>
+
+        <div className="flex flex-col text-white">
+          {window.screen.width < 1024
             ? Value.map((elem) => <Littletokens key={elem.name} data={elem} />)
             : Value.map((elem) => <BigTokens key={elem.name} data={elem} />)}
+          {Value.map((elem) => <Littletokens key={elem.name} data={elem} />)}
         </div>
+      
+     
+
     </>
   );
 }
