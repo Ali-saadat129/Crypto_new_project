@@ -2,9 +2,9 @@ import React from "react";
 // context and data
 import { MyContext } from "../../context/Contextprovider";
 // Hooks
-import { useContext ,useState , useEffect} from "react";
+import { useContext, useState, useEffect } from "react";
 // function
-import {FilterData} from "../../Functions/Searchpage"
+import { FilterData } from "../../Functions/Searchpage";
 // Components
 import BigTokens from "../../Shared/BigTokens";
 import Littletokens from "../../Shared/Littletokens";
@@ -12,36 +12,33 @@ import Littletokens from "../../Shared/Littletokens";
 export default function Search() {
   const Recive = useContext(MyContext);
   const data = Recive.Data;
-  // data to show 
-  const [Value , setValue] = useState([])
+  // data to show
+  const [Value, setValue] = useState(data);
   // input enter
-  const [Input , setInput] = useState("")
+  const [Input, setInput] = useState("");
 
   const inputHandler = (event) => {
-    setInput(event.target.value)
-  }
-  
-  const FilterHandler = (filterBy , data) => {  
-    const filteredData = FilterData(data, filterBy);
-    setValue(filteredData);
-  }
-  useEffect(() => {
-    FilterHandler(Input , data);
-  },[Input])
-  useEffect(() => {
-    setValue(data);
-    FilterHandler(Input , data);
-  },[Input , data])
+    setInput(event.target.value);
+  };
 
-  const show = () => {
-    console.log(Recive.Data)
-  }
+
+  useEffect(() => {
+
+    const FilterHandler = (filterBy, data) => {
+      const filteredData = FilterData(data, filterBy);
+      setValue(filteredData);
+      console.log(Value);
+    };
+
+    FilterHandler(Input, data);
+  }, [Input]);
+
 
 
   return (
     <>
       <header className=" ">
-        <div className="flex items-center space-x-2 ">
+        <div className="flex items-center space-x-2  ">
           <input
             type="text"
             value={Input}
@@ -59,17 +56,12 @@ export default function Search() {
           </button>
         </div>
       </header>
-      <button onClick={show}>test</button>
 
-        <div className="flex flex-col text-white">
-          {window.screen.width < 1024
-            ? Value.map((elem) => <Littletokens key={elem.name} data={elem} />)
-            : Value.map((elem) => <BigTokens key={elem.name} data={elem} />)}
-          {Value.map((elem) => <Littletokens key={elem.name} data={elem} />)}
-        </div>
-      
-     
-
+      <div className=" text-white flex flex-col w-[100%] overflow-scroll lg:grid lg:grid-cols-3 lg:px-10 justify-center">
+        {Value && Value.length > 0 && window.screen.width < 1024
+          ? Value.map((elem) => <Littletokens key={elem.name} data={elem} />)
+          : Value.map((elem) => <BigTokens key={elem.name} data={elem} />)}
+      </div>
     </>
   );
 }

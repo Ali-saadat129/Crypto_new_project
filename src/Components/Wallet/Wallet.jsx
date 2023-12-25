@@ -3,7 +3,8 @@ import React from "react";
 // css
 import Styles from "./Wallet.module.css";
 // components
-import Littletokens from "../../Shared/Littletokens";
+// import Littletokens from "../../Shared/Littletokens";
+import Littletokens from "../../Shared/Littletokens"
 import BigTokens from "../../Shared/BigTokens";
 import WalletNavbar from "./WalletNavbar";
 // data - context

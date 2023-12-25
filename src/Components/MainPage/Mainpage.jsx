@@ -11,7 +11,9 @@ const Mainpage = () => {
 
   return (
     <div className={`${Styles.Main_container} text-white`}>
-      {/* <p>{data}</p> */}
+
+      
+
     </div>
   );
 };

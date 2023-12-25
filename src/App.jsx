@@ -7,6 +7,9 @@ import Mainpage from "./Components/MainPage/Mainpage";
 import Sidebar from "./Components/Sidebar/Sidebar";
 import Wallet from "./Components/Wallet/Wallet";
 import Search from "./Components/Search/Search";
+import Setting from "./Components/Setting/Setting";
+import Privacy from "./Components/Privacy/Privacy";
+import Aboutus from "./Components/Aboutus/Aboutus";
 // functions
 import SideButton from "./Functions/Sidebar";
 // context
@@ -31,7 +34,7 @@ function App() {
           }  `}
         >
           <div className={``}>
-            <nav className={``} onClick={() => setshow(!show)}>      
+            <nav className={``} onClick={() => setshow(!show)}>
               {window.screen.width < 768 && SideButton()}
             </nav>
             <nav
@@ -52,8 +55,11 @@ function App() {
             <Contextprovider>
               <Routes>
                 <Route path="/" element={<Mainpage />}></Route>
-                <Route path="/wallet" element={<Wallet />} ></Route>
+                <Route path="/wallet" element={<Wallet />}></Route>
                 <Route path="/searchpage" element={<Search />}></Route>
+                <Route path="/setting" element={<Setting />}></Route>
+                <Route path="/privacy" element={<Privacy />}></Route>
+                <Route path="/about-us" element={<Aboutus />}></Route>
               </Routes>
             </Contextprovider>
           </div>
