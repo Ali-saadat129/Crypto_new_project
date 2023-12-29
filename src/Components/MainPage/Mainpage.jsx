@@ -110,8 +110,8 @@ const Mainpage = () => {
         <hr></hr>
 
         <div className="overflow-x-scroll">
-          <div className="mt-5 md:w-full flex flex-wrap justify-center items-center overflow-x-scroll p-2  ">
-            <div className=" mr-2 border rounded-xl p-2 w-1/2 md:1/3 lg:w-1/6  ">
+          <div className="mt-5 md:w-full  grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 overflow-x-scroll p-2  ">
+            <div className=" mr-2 border rounded-xl p-2   ">
               <img
                 className="rounded-t-xl"
                 width="50%"
@@ -126,7 +126,7 @@ const Mainpage = () => {
               </p>
             </div>
 
-            <div className=" mr-2 border rounded-xl p-2 w-1/3 sm:w-1/3 md:1/3 lg:w-1/6 ">
+            <div className=" mr-2 border rounded-xl p-2  ">
               <img
                 className="rounded-t-xl"
                 width="50%"
@@ -141,7 +141,7 @@ const Mainpage = () => {
               </p>
             </div>
 
-            <div className=" mr-2 border rounded-xl p-2 w-1/3 sm:w-1/3 md:1/3 lg:w-1/6   ">
+            <div className=" mr-2 border rounded-xl p-2    ">
               <img
                 className="rounded-t-xl"
                 width="50%"
@@ -155,7 +155,7 @@ const Mainpage = () => {
                 recusandae unde veritatis dolores.
               </p>
             </div>
-            <div className=" mr-2 border rounded-xl p-2 w-1/3 sm:w-1/3 md:1/3 lg:w-1/6   ">
+            <div className=" mr-2 border rounded-xl p-2    ">
               <img
                 className="rounded-t-xl"
                 width="50%"
@@ -170,7 +170,7 @@ const Mainpage = () => {
               </p>
             </div>
 
-            <div className=" mr-2 border rounded-xl p-2 w-1/3 sm:w-1/3 md:1/3 lg:w-1/6   ">
+            <div className=" mr-2 border rounded-xl p-2    ">
               <img
                 className="rounded-t-xl"
                 width="50%"
@@ -187,8 +187,11 @@ const Mainpage = () => {
           </div>
         </div>
       </div>
-
-      <footer></footer>
+      <hr className="opacity-25"></hr>
+      <footer className="opacity-50 flex">
+        <h1 className="w-1/2">This website is created for my CV </h1>
+        alisaadt129@gmail.com
+      </footer>
     </div>
   );
 };
