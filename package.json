@@ -1,4 +1,5 @@
 {
+  "homepage": "http://Ali-saadat129.github.io/Crypto_new_project",
   "name": "crypto_new_project",
   "version": "1.0.0",
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
@@ -6,7 +7,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "react-scripts start",
-    "build": "react-scripts build"
+    "build": "react-scripts build",
+    "predeploy": "npm run build",
+    "deploy" : "gh-pages -d -build"
   },
   "author": "",
   "license": "ISC",
@@ -30,6 +33,7 @@
     ]
   },
   "devDependencies": {
+    "gh-pages": "^6.1.1",
     "webpack": "^5.89.0",
     "webpack-cli": "^5.1.4"
   }
