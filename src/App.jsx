@@ -60,6 +60,7 @@ function App() {
                 <Route path="/setting" element={<Setting />}></Route>
                 <Route path="/privacy" element={<Privacy />}></Route>
                 <Route path="/about-us" element={<Aboutus />}></Route>
+                <Route path="/*" element={<Mainpage />} />
               </Routes>
             </Contextprovider>
           </div>
