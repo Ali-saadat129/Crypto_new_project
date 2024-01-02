@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Crypto_new_project/static/css/main.6a7cd1f2.css",
-    "main.js": "/Crypto_new_project/static/js/main.44b87cc1.js",
+    "main.js": "/Crypto_new_project/static/js/main.1f44d25b.js",
     "static/media/bitpic.png": "/Crypto_new_project/static/media/bitpic.8c83aef3af85184431a8.png",
     "static/media/kjoin.png": "/Crypto_new_project/static/media/kjoin.e91c3733613751e8c12f.png",
     "static/media/binance.png": "/Crypto_new_project/static/media/binance.ad5ddad3767af91ee8ae.png",
@@ -15,10 +15,10 @@
     "static/media/traiding-view.png": "/Crypto_new_project/static/media/traiding-view.babd00a08f175f259560.png",
     "index.html": "/Crypto_new_project/index.html",
     "main.6a7cd1f2.css.map": "/Crypto_new_project/static/css/main.6a7cd1f2.css.map",
-    "main.44b87cc1.js.map": "/Crypto_new_project/static/js/main.44b87cc1.js.map"
+    "main.1f44d25b.js.map": "/Crypto_new_project/static/js/main.1f44d25b.js.map"
   },
   "entrypoints": [
     "static/css/main.6a7cd1f2.css",
-    "static/js/main.44b87cc1.js"
+    "static/js/main.1f44d25b.js"
   ]
 }
