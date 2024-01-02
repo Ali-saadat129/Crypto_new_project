@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/Crypto_new_project/static/css/main.6a7cd1f2.css",
+    "main.js": "/Crypto_new_project/static/js/main.44b87cc1.js",
+    "static/media/bitpic.png": "/Crypto_new_project/static/media/bitpic.8c83aef3af85184431a8.png",
+    "static/media/kjoin.png": "/Crypto_new_project/static/media/kjoin.e91c3733613751e8c12f.png",
+    "static/media/binance.png": "/Crypto_new_project/static/media/binance.ad5ddad3767af91ee8ae.png",
+    "static/media/cow.jpg": "/Crypto_new_project/static/media/cow.580af32e637908de6a5d.jpg",
+    "static/media/Gabarito-VariableFont_wght.ttf": "/Crypto_new_project/static/media/Gabarito-VariableFont_wght.f2d1734f08d9c6a4f5d8.ttf",
+    "static/media/photo.jpg": "/Crypto_new_project/static/media/photo.84a56298e3c524d24cd5.jpg",
+    "static/media/paypal.jpg": "/Crypto_new_project/static/media/paypal.4ec84ba6627dd89a94d0.jpg",
+    "static/media/news.jpg": "/Crypto_new_project/static/media/news.4138162895c3d2af3f1b.jpg",
+    "static/media/chartpic.webp": "/Crypto_new_project/static/media/chartpic.1a176ae1de9984c7fe40.webp",
+    "static/media/coinbase.jpg": "/Crypto_new_project/static/media/coinbase.1ff7283197b480697e44.jpg",
+    "static/media/traiding-view.png": "/Crypto_new_project/static/media/traiding-view.babd00a08f175f259560.png",
+    "index.html": "/Crypto_new_project/index.html",
+    "main.6a7cd1f2.css.map": "/Crypto_new_project/static/css/main.6a7cd1f2.css.map",
+    "main.44b87cc1.js.map": "/Crypto_new_project/static/js/main.44b87cc1.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6a7cd1f2.css",
+    "static/js/main.44b87cc1.js"
+  ]
+}
