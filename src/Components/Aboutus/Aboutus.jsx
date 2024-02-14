@@ -1,6 +1,6 @@
 import React from "react";
 // photo
-import myimage from "../../Shared/photo.jpg";
+import myimage from "../Shared/photo.jpg";
 
 export default function Aboutus() {
   return (

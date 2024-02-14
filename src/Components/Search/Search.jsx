@@ -6,8 +6,8 @@ import { useContext, useState, useEffect } from "react";
 // function
 import { FilterData } from "../../Functions/Searchpage";
 // Components
-import BigTokens from "../../Shared/BigTokens";
-import Littletokens from "../../Shared/Littletokens";
+import BigTokens from "../Shared/BigTokens";
+import Littletokens from "../Shared/Littletokens";
 
 export default function Search() {
   const Recive = useContext(MyContext);
