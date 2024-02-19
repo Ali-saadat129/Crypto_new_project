@@ -24,7 +24,7 @@ function App() {
   const [show, setshow] = useState(false);
 
   return (
-    <BrowserRouter>
+    <>
       <Contextprovider>
         <div
           className={`bg-[#1F1D2B] h-[100vh]  grid md:grid-cols-[2fr_6fr] lg:grid-cols-[1fr_6fr] grid-cols-[1fr_5fr] font-gabarito ${
@@ -66,7 +66,7 @@ function App() {
           </div>
         </div>
       </Contextprovider>
-    </BrowserRouter>
+    </>
   );
 }
 

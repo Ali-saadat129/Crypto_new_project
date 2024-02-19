@@ -2,37 +2,37 @@ import axios from "axios";
 
 const DataRequest = async () => {
 
-  if (process.env.NODE_ENV !== 'production') {
+  // if (process.env.NODE_ENV !== 'production') {
 
-    try {
+  //   try {
 
-      // Original axios call
-      const response = await axios.get('/data.json');
+  //     // Original axios call
+  //     const response = await axios.get('/data.json');
 
-      // Original walletdata call
-      const walletdata = await axios.get('/wallet.json'); 
+  //     // Original walletdata call
+  //     const walletdata = await axios.get('/wallet.json'); 
 
-      if (response.status !== 200 || walletdata.status !== 200) {
-        throw new Error('Failed to fetch data');
-      }
+  //     if (response.status !== 200 || walletdata.status !== 200) {
+  //       throw new Error('Failed to fetch data');
+  //     }
     
-      const data = response.data;
+  //     const data = response.data;
     
-      const walletData = walletdata.data;
-      return { 
-        data: data,  
-        walletData: walletData  
-      };
+  //     const walletData = walletdata.data;
+  //     return { 
+  //       data: data,  
+  //       walletData: walletData  
+  //     };
 
-    } catch (error) {
+  //   } catch (error) {
 
-      // Original catch error handler
-      console.error('Error fetching data:', error);  
-      return null;
+  //     // Original catch error handler
+  //     console.error('Error fetching data:', error);  
+  //     return null;
 
-    }
+  //   }
 
-  } else {
+  // } else {
     
     // Mocked data for production
     return {
@@ -3307,7 +3307,7 @@ const DataRequest = async () => {
       ],
     };
 
-  }
+  // }
 
 };
 
